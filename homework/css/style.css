@@ -1,0 +1,193 @@
+@media print {
+	@page {
+		margin-top: 1.5cm;
+	}
+
+
+	body {
+		background: transparent;
+		background-image: none;
+		padding-top: 0;
+	}
+
+	.container {
+		max-width: 800px;
+	}
+
+	.tm-sidebar, #about, section:not(:first-of-type) {
+		display: none;
+	}
+
+	.tm-main-content {
+		margin-left: 10px;
+		padding-left: 0;
+	}
+
+	.pad {
+		padding: 10px;
+	}
+
+	.tm-banner {
+		height: 200px;
+		padding: unset;
+	}
+
+	.tm-content-box {
+		margin-bottom: 0;
+	}
+
+	.flex-2-col {
+		flex-direction: column;
+		margin-bottom: 50px;
+	}
+
+	h2.tm-section-title {
+		color: blue;
+	}
+
+	.tm-team-description-container {
+		max-width: none;
+	}
+
+	.flex-item:last-child {
+		text-align: center;
+	}
+
+}
+
+@media screen {
+
+	/* task 1 */	
+     #about img {
+     	border-radius: 50%;
+     }
+
+     #about .box-bg:hover {
+     	background-color: #4faed1;
+     }
+
+     #about h2:hover {
+     	color: white;
+     	font-weight: bold;
+     }
+
+/* task 3 */
+
+    p:first-letter {
+    	color: #76cdd7;
+    	font-size: 30px;
+    }    
+
+/* task 4 */
+ 
+    .tm-content-box, .tm-sidebar {
+    	box-shadow: 0 0 11px rgba(0,0,0,0.9);
+      }  
+     
+/* task 5*/
+
+    .tm-content-box {
+    	position: relative;
+    }
+ 
+    .tm-content-box::after {
+    	content: '';
+    	position: absolute;
+    	left: 0;
+    	top: 0;
+    	width: 0;
+    	height: 0;
+    	border-top: 24px solid #4faed1;
+    	border-right: 130px solid transparent;
+    	z-index: 10;
+    }
+
+    .tm-content-box.flex-2-col:nth-child(2)::after{
+    	display: none;
+    }
+
+/* task 6 */
+
+    div.carosel-content h2.tm-section-title {
+    	color: gainsboro;
+    	letter-spacing: 5px;
+    }    
+
+/* task 7 */
+
+    h2 + p {
+    	font-style: italic;
+    }    
+
+/* task 8 */
+
+    p {
+    	text-indent: 15px;
+    	line-height: 1.7;
+    }
+
+/* task 9 */
+    
+    .heading h2 {
+        text-align: center;
+        color: #76cdd7;
+    }
+
+    .pad ol a {
+        color: black;
+    }
+
+    .pad ol a:visited {
+        color: silver;
+    }
+
+    .pad ol a:hover {
+        color: #76cdd7;
+        text-decoration: underline double;
+    }
+
+    .pad ol a.text::after {
+        content: "New";
+        color: red;
+        font-size: .7em;
+        vertical-align: super;
+    }
+
+    
+ /* task 10*/
+    .boxes.gallery-container div h2 {
+        font-size: 2.5em;
+    }
+    .boxes.gallery-container div p {
+        font-size: 1.4em;
+    }
+    section.blocks ul li:nth-child(odd) {
+        background: #f2f2f2;
+    }
+    .blocks .tm-content-box ul li p:first-letter {
+        color: black;
+    }
+
+/*task 11*/
+    .tm-main-nav li:not(:last-of-type) {
+        border-bottom: silver 2px dotted;
+    }
+
+/*task 12*/
+    input[type=text], button[type=submit] {
+        color: red;
+    }
+
+    .mandatory-field::after {
+        content: "*";
+        color: red;
+        font-size: 15px;
+        font-weight: bold;
+        vertical-align: top;
+    }
+
+    button[type=submit]:hover {
+        background-color: #76cdd7;
+    }
+
+}
